@@ -92,3 +92,6 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+## Create simlink for "html" folder
+RUN ln -s /var/www/html /var/www/app

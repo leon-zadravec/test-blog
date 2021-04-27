@@ -30,12 +30,17 @@ class BlogArticles {
 	/**
 	 * @var string
 	 */
-	private string $text = '';
+	private string $fullText = '';
 
 	/**
 	 * @var string
 	 */
 	private string $image = '';
+
+	/**
+	 * @var string
+	 */
+	private string $slug = '';
 
 	/**
 	 * @var Authors
@@ -51,6 +56,10 @@ class BlogArticles {
 	 * @var DateTime
 	 */
 	private DateTime $createdAt;
+
+	public function mapFromDb($data) {
+
+	}
 
 	/**
 	 * @return int
@@ -97,15 +106,15 @@ class BlogArticles {
 	/**
 	 * @return string
 	 */
-	public function getText(): string {
-		return $this->text;
+	public function getFullText(): string {
+		return $this->fullText;
 	}
 
 	/**
-	 * @param string $text
+	 * @param string $fullText
 	 */
-	public function setText(string $text): void {
-		$this->text = $text;
+	public function setFullText(string $fullText): void {
+		$this->fullText = $fullText;
 	}
 
 	/**
@@ -120,6 +129,20 @@ class BlogArticles {
 	 */
 	public function setImage(string $image): void {
 		$this->image = $image;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getSlug(): string {
+		return $this->slug;
+	}
+
+	/**
+	 * @param string $slug
+	 */
+	public function setSlug(string $slug): void {
+		$this->slug = $slug;
 	}
 
 	/**

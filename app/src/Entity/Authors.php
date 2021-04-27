@@ -10,6 +10,8 @@ use DateTime;
  * @package App\Entities
  */
 class Authors {
+	private static $tableName = 'authors';
+
 	/**
 	 * @var int
 	 */
@@ -18,7 +20,7 @@ class Authors {
 	/**
 	 * @var string
 	 */
-	private string $name = '';
+	private string $username = '';
 
 	/**
 	 * @var string

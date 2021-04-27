@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entities\BlogArticles;
-use App\Services\TwigService;
+use App\Entity\BlogArticles;
+use App\Service\TwigService;
 use Twig\Environment;
 
 /**
@@ -28,11 +28,13 @@ class BlogController {
 	}
 
 	public function index() {
-
+		echo 'index';
+		return 'index';
 	}
 
-	public function detail() {
-
+	public function detail($slug) {
+		echo 'detail';
+		return 'detail';
 	}
 
 	public function create() {

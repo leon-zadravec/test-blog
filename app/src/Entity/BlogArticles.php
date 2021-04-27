@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Entities;
+namespace App\Entity;
 
 use DateTime;
 
@@ -10,6 +10,8 @@ use DateTime;
  * @package App\Entities
  */
 class BlogArticles {
+	private static $tableName = 'blog_articles';
+
 	/**
 	 * @var int
 	 */

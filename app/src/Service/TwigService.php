@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Service;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -19,9 +19,9 @@ class TwigService {
 	 * TwigService constructor.
 	 */
 	public function __construct() {
-		$loader = new FilesystemLoader(__DIR__ . '../views/');
+		$loader = new FilesystemLoader(dirname(__DIR__).'/../views/');
 		$twig = new Environment($loader, [
-			'cache' => __DIR__ . '../../cache/twig/',
+			'cache' => dirname(__DIR__).'/../../cache/twig/',
 		]);
 		$this->twig = $twig;
 	}

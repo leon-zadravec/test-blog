@@ -1,18 +1,22 @@
 #!/usr/local/bin/php
 <?php
 
+use App\Command\CreateAuthors;
 use App\Command\CreateDatabase;
 
 if (php_sapi_name() !== 'cli') {
-    exit;
+	exit;
 }
 
 require dirname(__DIR__).'/../vendor/autoload.php';
 
-if($argv[1] == 'create-database') {
+if ($argv[1] === 'create-database') {
 	$dbCreator = new CreateDatabase();
 	$dbCreator->createTables();
 	echo 'done';
+} else if ($argv[1] === 'create-authors') {
+	$dbCreator = new CreateAuthors();
+	$dbCreator->createAuthors();
 } else {
 	echo 'command not found';
 }
